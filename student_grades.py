@@ -31,10 +31,18 @@ class StudentsGrades:
                 vysledek.append(i)
         return vysledek
 
+    def get_sorted(self):
+        scores = self.scores.copy()
+
+        for j in range(len(scores)):
+            for i in range(0, len(scores) - j - 1):
+                if scores[i] > scores[i +1]:
+                    scores[i], scores[i + 1] = scores[i + 1], scores[i]
+        return scores
+
 
 if __name__ == "__main__":
     results = StudentsGrades([85, 42, 91, 67, 50, 73, 100, 38, 58])
 
-    print(results.find(100))
-    print(results.find(50))
-    print(results.find(77))
+    print(results.get_sorted())
+    print(results.scores)
