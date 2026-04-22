@@ -44,5 +44,15 @@ class StudentsGrades:
 if __name__ == "__main__":
     results = StudentsGrades([85, 42, 91, 67, 50, 73, 100, 38, 58])
 
-    print(results.get_sorted())
-    print(results.scores)
+    print("Počet studentů:", results.count())
+
+    for i in range(results.count()):
+        body = results.get_by_index(i)
+        znamka = results.get_grade(i)
+        print(f"Student {i}: {body} points – {znamka}")
+
+    print("Indexy studentů se 100 body:", results.find(100))
+
+    print("Seřazené výsledky:", results.get_sorted())
+
+    print("Původní seznam:", results.scores)
