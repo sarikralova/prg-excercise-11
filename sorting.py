@@ -15,13 +15,13 @@ def selection_sort(hodnoty):
     return hodnoty
 
 
-def bubble_sort(numbers):
-    numbers = numbers.copy()
-    for j in range(len(numbers)):
-        for i in range(0, len(numbers) - j - 1):
-            if numbers[i] > numbers[i + 1]:
-                numbers[i], numbers[i + 1] = numbers[i + 1], numbers[i]
-    return numbers
+def bubble_sort(cisla):
+    cisla = cisla.copy()
+    for j in range(len(cisla)):
+        for i in range(0, len(cisla) - j - 1):
+            if cisla[i] > cisla[i + 1]:
+                cisla[i], cisla[i + 1] = cisla[i + 1], cisla[i]
+    return cisla
 
 if __name__ == "__main__":
 
